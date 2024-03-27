@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+@import url('./utils/_padding.scss');
+
+body{
+  font-family: "Montserrat",sans-serif;
+}
+
+.container {
+  margin: 0 auto;
+
+  @include lg {
+    max-width: $screen-lg-min;
+  }
+
+  @include md {
+    max-width: $screen-md-min;
+  }
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.input-search{
+  background-image: url('~/assets/img/searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px !important;
+}
+
+.skeleton {
+	background-color: #e2e5e7;
+	background-image:			
+			linear-gradient(
+				90deg, 
+				rgba(#fff, 0), 
+				rgba(#fff, 0.5),
+				rgba(#fff, 0)
+			);
+	background-size: 40px 100%;
+	background-repeat: no-repeat;
+	background-position: left -40px top 0; 
+	animation: shine 1s ease infinite; 
+}
+
+@keyframes shine {
+	to {
+		background-position: right -40px top 0;
+	}
+}
+
+.skeleton-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 190px;
+  height: 300px;
+  margin: auto;
+  border-radius: 4px;
+  cursor: pointer;
+}
